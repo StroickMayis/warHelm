@@ -15,8 +15,8 @@ module.exports = {
     mode: `development`,
     plugins: [
         new HtmlWebpackPlugin({
-            filename: `pages/index.html`,
-            template: './src/pages/index.html',
+            filename: `index.html`,
+            template: './src/index.html',
             chunks: [`index`]
         }),
     ],
@@ -30,7 +30,16 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
             },
-            
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                }
+            }
         ],
     },
 };

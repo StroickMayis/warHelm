@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'Papyrus';
-    src: url('./fonts/Papyrus-Regular.woff2') format('woff2'),
-        url('./fonts/Papyrus-Regular.woff') format('woff');
+    src: url('./assets/fonts/Papyrus-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Papyrus-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -219,7 +219,7 @@ main {
 }
 
 #logIn {
-    background-image: url("./images/loginBackground.png");
+    background-image: url("./assets/images/loginBackground.png");
     background-repeat: no-repeat;
     background-size: max(100dvh*2.05, 100dvw);
     background-position:center;
