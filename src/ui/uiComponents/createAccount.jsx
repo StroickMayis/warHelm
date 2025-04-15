@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
+import passwordEyeVisible from '../../assets/images/passwordEyeVisible.png';
 
 function CreateAccount() {
     return (
         <div id="logIn">
             <Link to="/" id="logInPageHomeLogoLink">
-                <img src="../images/logo.png" alt="WarHelm Logo" />
+                <img src={logo} alt="WarHelm Logo" />
             </Link>
             <div className="logInContainer">
                 <form id="createAccountForm" action="" method="post">
@@ -19,11 +21,11 @@ function CreateAccount() {
                         </div>
                         <div id="passwordContainer" className="textInputContainer">
                             <input id="createAccountPasswordOne" type="password" name="password" placeholder="Password" maxLength="30" required />
-                            <img className="passwordViewerIcon" id="passwordViewerIconOne" src="../images/passwordEyeVisible.png" alt="PasswordViewer" />
+                            <img className="passwordViewerIcon" id="passwordViewerIconOne" src={passwordEyeVisible} alt="PasswordViewer" />
                         </div>
                         <div id="passwordContainer" className="textInputContainer">
                             <input id="createAccountPasswordTwo" type="password" name="passwordConfirm" placeholder="Confirm Password" maxLength="30" required />
-                            <img className="passwordViewerIcon" id="passwordViewerIconTwo" src="../images/passwordEyeVisible.png" alt="PasswordViewer" />
+                            <img className="passwordViewerIcon" id="passwordViewerIconTwo" src={passwordEyeVisible} alt="PasswordViewer" />
                         </div>
                         <div id="passwordsDoNotMatchMessageContainer">
                         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import campaignPreview from '../../assets/images/campaignPreview.jpeg';
 
 function CampaignList() {
     return (
@@ -13,7 +14,7 @@ function CampaignList() {
             <div className="list">
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -33,7 +34,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -53,7 +54,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -73,7 +74,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -93,7 +94,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -113,7 +114,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>
@@ -133,7 +134,7 @@ function CampaignList() {
                 </div>
                 <div className="campaignCard">
                     <div id="campaignCardImageContainer">
-                        <img id="campaignCardImage" src="../images/campaignPreview.jpeg" alt="Campaign Preview" />
+                        <img id="campaignCardImage" src={campaignPreview} alt="Campaign Preview" />
                     </div>
                     <div id="campaignCardInfoContainer">
                         <div id="campaignCardName">Campaign Name</div>

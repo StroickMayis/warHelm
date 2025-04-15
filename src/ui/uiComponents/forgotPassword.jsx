@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 
 function ForgotPassword() {
     return (
         <div id="logIn">
             <Link to="/" id="logInPageHomeLogoLink">
-                <img src="../images/logo.png" alt="WarHelm Logo" />
+                <img src={logo} alt="WarHelm Logo" />
             </Link>
             <div className="logInContainer">
                 <form id="forgotPasswordForm" action="" method="post">

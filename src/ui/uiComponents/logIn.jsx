@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
+import passwordEyeVisible from '../../assets/images/passwordEyeVisible.png';
 
 function LogIn() {
     return (
         <div id="logIn">
             <Link to="/" id="logInPageHomeLogoLink">
-                <img src="../images/logo.png" alt="WarHelm Logo" />
+                <img src={logo} alt="WarHelm Logo" />
             </Link>
             <div className="logInContainer">
                 <form id="logInForm" action="" method="post">
@@ -16,7 +18,7 @@ function LogIn() {
                         </div>
                         <div id="passwordContainer" className="textInputContainer">
                             <input id="logInPassword" type="password" name="password" placeholder="Password" maxLength="30" required />
-                            <img className="passwordViewerIcon" id="passwordViewerIcon" src="../images/passwordEyeVisible.png" alt="PasswordViewer" />
+                            <img className="passwordViewerIcon" id="passwordViewerIcon" src={passwordEyeVisible} alt="PasswordViewer" />
                         </div>
                         <div id="logInButtons">
                             <button id="logInButton" type="submit">Log In</button>
