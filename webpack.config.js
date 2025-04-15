@@ -19,26 +19,6 @@ module.exports = {
             template: './src/pages/index.html',
             chunks: [`index`]
         }),
-        new HtmlWebpackPlugin({
-            filename: `pages/campaignList.html`,
-            template: './src/pages/campaignList.html',
-            // chunks: [`about`]
-        }),
-        new HtmlWebpackPlugin({
-            filename: `pages/createAccount.html`,
-            template: './src/pages/createAccount.html',
-            // chunks: [`about`]
-        }),
-        new HtmlWebpackPlugin({
-            filename: `pages/forgotPassword.html`,
-            template: './src/pages/forgotPassword.html',
-            // chunks: [`about`]
-        }),
-        new HtmlWebpackPlugin({
-            filename: `pages/logIn.html`,
-            template: './src/pages/logIn.html',
-            // chunks: [`about`]
-        }),
     ],
     module: {
         rules: [
@@ -47,9 +27,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
             },
+            
         ],
     },
 };
