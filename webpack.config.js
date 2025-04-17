@@ -9,9 +9,11 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        assetModuleFilename: 'images/[name][ext][query]'
     },
     devtool: "eval-source-map",
+    devServer: {
+        historyApiFallback: true,
+    },
     mode: `development`,
     plugins: [
         new HtmlWebpackPlugin({
@@ -29,6 +31,16 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[name][ext][query]'
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext][query]'
+                }
             },
             {
                 test: /\.(js|jsx)$/,
