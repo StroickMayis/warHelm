@@ -1,6 +1,6 @@
 import React from 'react';
-import SiteBar from './siteBar.jsx';
-import MenuBar from './menuBar.jsx';
+import SiteBar from '../uiComponents/siteBar.jsx';
+import MenuBar from '../uiComponents/menuBar.jsx';
 import { Outlet } from 'react-router-dom';
 
 function HomePage() {

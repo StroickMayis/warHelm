@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 // Import components
-import HomePage from './ui/uiComponents/homePage.jsx';
+import HomePage from './ui/pageComponents/homePage.jsx';
 import CampaignList from './ui/uiComponents/campaignList.jsx';
+import LogInPage from './ui/pageComponents/logInPage.jsx';
 import LogIn from './ui/uiComponents/logIn.jsx';
 import CreateAccount from './ui/uiComponents/createAccount.jsx';
 import ForgotPassword from './ui/uiComponents/forgotPassword.jsx';
-import NoPage from './ui/uiComponents/noPage.jsx';
+import NoPage from './ui/pageComponents/noPage.jsx';
 
 function App() {
     return (
@@ -21,9 +22,11 @@ function App() {
                 </Route>
                 {/* I should make the login page divided into components, so that the background is like the main component that stays while the login part is changing */}
                 {/* FIX THE CANNOT GET ISSUE WHEN I GET BACK */}
-                <Route path="/login" element={<LogIn />} />
-                <Route path="/create-account" element={<CreateAccount />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/login" element={<LogInPage />} >
+                    <Route index element={<LogIn />} />
+                    <Route path="create-account" element={<CreateAccount />} />
+                    <Route path="forgot-password" element={<ForgotPassword />} />
+                </Route>
                 <Route path="*" element={<NoPage />} />
             </Routes>
         </BrowserRouter>

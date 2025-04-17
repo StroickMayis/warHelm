@@ -1,0 +1,2 @@
+Okay, I dont think I need to setup a back end immediately, I will work on frontend for now.
+I will use plceholder JSON data to simulate accounts being logged in etc.
