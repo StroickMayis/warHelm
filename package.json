@@ -24,7 +24,7 @@
     "react-router-dom": "^7.5.0"
   },
   "scripts": {
-    "devStart": "nodemon server.js",
+    "devStart": "nodemon src/backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev": "webpack serve",
