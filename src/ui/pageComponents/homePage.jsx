@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SiteBar from '../uiComponents/siteBar.jsx';
 import MenuBar from '../uiComponents/menuBar.jsx';
 import { Outlet } from 'react-router-dom';
 
 function HomePage() {
+
     return (
         <>
             <header>

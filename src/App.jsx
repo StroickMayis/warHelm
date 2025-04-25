@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -11,11 +11,27 @@ import CreateAccount from './ui/uiComponents/createAccount.jsx';
 import ForgotPassword from './ui/uiComponents/forgotPassword.jsx';
 import NoPage from './ui/pageComponents/noPage.jsx';
 
+const accounts = localStorage.getItem('accounts');
+if(!accounts) {
+    localStorage.setItem('accounts', JSON.stringify([]));
+}
+
+export const Context = React.createContext();
+
 function App() {
+
+    const [currentUser, setCurrentUser] = useState(null);
+    useEffect(() => {
+        if(sessionStorage.getItem(`currentUser`)) {
+            setCurrentUser(JSON.parse(sessionStorage.getItem(`currentUser`)));
+        }
+    }, []);
+
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} >
+            <Context.Provider value={{ currentUser, setCurrentUser }}>
+                <Routes>
+                    <Route path="/" element={<HomePage />} >
                     {/* If I make a route in here with "index" it will be the default route, they can't have children routes though, you'll probably want layout routes to be able to have children routes */}
                     {/* A <Route path> without an element prop adds a path prefix to its child routes, without introducing a parent layout. */}
                     <Route path="/campaign-list" element={<CampaignList />} />
@@ -27,8 +43,9 @@ function App() {
                     <Route path="create-account" element={<CreateAccount />} />
                     <Route path="forgot-password" element={<ForgotPassword />} />
                 </Route>
-                <Route path="*" element={<NoPage />} />
-            </Routes>
+                    <Route path="*" element={<NoPage />} />
+                </Routes>
+            </Context.Provider>
         </BrowserRouter>
     );
 }

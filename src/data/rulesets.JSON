@@ -1,0 +1,41 @@
+[
+    {
+        "id": "ruleset1",
+        "name": "ruleset1",
+        "characterSheetTemplateRef": "someRefToACharSheetTemplate",
+        "items": [
+            "item1"
+        ],
+        "abilities": [
+            "ability1"
+        ],
+        "entities": [
+            "entity1"
+        ],
+        "otherUserCreatedAssets": [
+            {
+                "id": "backgrounds",
+                "name": "traits",
+                "description": "or whatever other shit you want to throw in here."
+            }
+        ],
+        "credits": "written credits here, implement some iterative way to do this later so that people can add credits to the rulesets they modify.",
+        "accountsInvolvedInCreation": [
+            "test",
+            "test2"
+        ]
+    },
+    {
+        "id": "ruleset2",
+        "name": "ruleset2",
+        "characterSheetTemplateRef": "someRefToACharSheetTemplate",
+        "items": [
+            {
+                "id": "item1",
+                "name": "item1",
+                "description": "item1",
+                "functionality": "should actuallly make all this shit a reference to the ruleset and not store it on the actual account."
+            }
+        ]
+    }
+]

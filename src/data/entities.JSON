@@ -1,0 +1,23 @@
+[
+    {
+        "id": "entity1",
+        "rulesetID": "ruleset1",
+        "name": "entity1",
+        "description": "entity1",
+        "isPlayable": true,
+        "isNPC": false,
+        "isMonster": false,
+        "items": [
+            "ref to an item",
+            "ref to an item",
+            "ref to an item",
+            "ref to an item"
+        ],
+        "abilities": [
+            "ref to an ability",
+            "ref to an ability",
+            "ref to an ability",
+            "ref to an ability"
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "id": "item1",
+        "rulesetID": "ruleset1",
+        "name": "item1",
+        "description": "item1",
+        "functionality": "should actuallly make all this shit a reference to the ruleset and not store it on the actual account."
+    }
+]

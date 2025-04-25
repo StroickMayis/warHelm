@@ -1,0 +1,16 @@
+[
+    {
+        "username": "test",
+        "password": "test",
+        "email": "test@test.com",
+        "createdRulesets": [
+            "ruleset1",
+            "ruleset2"
+        ],
+        "campaigns": [
+            
+            "campaign1",
+            "campaign2"
+        ]
+    }
+]
