@@ -27,7 +27,7 @@
   "scripts": {
     "devStart": "nodemon src/backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "node app.js",
     "dev": "webpack serve",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
