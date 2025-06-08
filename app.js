@@ -3,6 +3,7 @@ import express from 'express';
 // import { router as indexRouter } from './routes/index.js';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -16,7 +17,5 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-
-const PORT = 3000;
 
 app.listen(PORT, () => { console.log(`Server running on port: ${PORT}`)});
