@@ -1,7 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
     entry: {
         index: './src/index.js',
     },
@@ -14,13 +18,16 @@ module.exports = {
     devtool: "eval-source-map",
     devServer: {
         historyApiFallback: true,
+        proxy: {
+            '/api': 'http://localhost:3000'
+        }
     },
-    mode: `development`,
+    mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
-            filename: `index.html`,
+            filename: 'index.html',
             template: './src/index.html',
-            chunks: [`index`]
+            chunks: ['index']
         }),
     ],
     module: {
@@ -55,4 +62,7 @@ module.exports = {
             }
         ],
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 };
