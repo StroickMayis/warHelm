@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 // app.use('/', indexRouter);
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello World' });
+    res.json({ message: 'Sup lil\' nigstick.' });
 });
 
 app.listen(PORT, () => { console.log(`Server running on port: ${PORT}`)}); 
